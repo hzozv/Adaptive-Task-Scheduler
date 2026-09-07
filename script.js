@@ -262,7 +262,16 @@ importInput.onchange = (e) => {
       }
 
       if (confirm(`Import ${importedTasks.length} tasks? This will overwrite current tasks.`)) {
-        tasks = importedTasks;
+        // Ensure imported task date fields are properly formatted
+        tasks = importedTasks.map(t => ({
+          ...t,
+          id: t.id || crypto.randomUUID(),
+          // Preserve nextReview if valid, otherwise keep null
+          nextReview: t.nextReview && !isNaN(new Date(t.nextReview).getTime()) 
+            ? new Date(t.nextReview).toISOString() 
+            : null
+        }));
+
         save();
         render();
         alert("Tasks imported successfully!");
@@ -273,5 +282,5 @@ importInput.onchange = (e) => {
   };
 
   reader.readAsText(file);
-  e.target.value = ""; // Reset input
+  e.target.value = "";
 };
