@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Scheduler</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+
+  <main>
+    
+
+    <h1>Task Scheduler</h1>
+    
+
+    <section class="card">
+      <h2>Add task</h2>
+
+      <form id="form">
+        <input
+          id="title"
+          required
+          maxlength="200"
+          placeholder="Enter a task"
+        >
+
+        <button>Add Task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Current task</h2>
+
+      <div id="current"></div>
+    </section>
+
+    <section class="card">
+      <h2>Tasks</h2>
+
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for a task..."
+      >
+
+      <div class="data-actions">
+        <button id="exportBtn" type="button">Export Tasks</button>
+        <button id="importBtn" type="button" class="secondary">Import Tasks</button>
+        <input type="file" id="importInput" accept=".json" class="hidden">
+    </div>
+
+      <div id="tasks"></div>
+    </section>
+
+  </main>
+
+  <div id="modal" class="overlay hidden">
+
+    <div class="modal">
+
+      <button id="close" class="x">×</button>
+
+      <h2>How did you find it?</h2>
+
+      <p id="modalTask"></p>
+
+      <div class="ratings">
+
+        <button data-r="1">
+          1<br>
+          <small>Very difficult</small>
+        </button>
+
+        <button data-r="2">
+          2<br>
+          <small>Difficult</small>
+        </button>
+
+        <button data-r="3">
+          3<br>
+          <small>Moderate</small>
+        </button>
+
+        <button data-r="4">
+          4<br>
+          <small>Easy</small>
+        </button>
+
+      </div>
+
+    </div>
+    
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

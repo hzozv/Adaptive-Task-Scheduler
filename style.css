@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f4f6;
+  color: #1f2937;
+  font: 16px Arial, sans-serif;
+}
+
+main {
+  max-width: 900px;
+  width: 92%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  margin: 16px 0;
+  box-shadow: 0 2px 10px #0000000d;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 18px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.current {
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.current h3 {
+  margin: 0 0 8px;
+}
+
+.done {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.shuffle {
+  width: 100%;
+  margin-top: 10px;
+  background: #6b7280;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  padding: 14px;
+  margin: 9px 0;
+}
+
+.date,
+.muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.delete {
+  background: #ef4444;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 6px;
+  background: #e5e7eb;
+  padding: 3px 7px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #0007;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  width: min(500px, 100%);
+}
+
+.x {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  color: #111;
+  font-size: 25px;
+  padding: 4px 10px;
+}
+
+.ratings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ratings button {
+  padding: 16px;
+  font-size: 20px;
+}
+
+.ratings small {
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
+
+  .item {
+    align-items: flex-start;
+  }
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-menu {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+#search {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.data-actions {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.data-actions button {
+  flex: 1;
+}
+
+.secondary {
+  background: #6b7280;
+}
+
+@media (max-width: 600px) {
+  .data-actions {
+    flex-direction: column;
+  }
+
+  .data-actions button {
+    width: 100%;
+  }
+}
